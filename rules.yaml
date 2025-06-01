@@ -1,0 +1,24 @@
+rules:
+  - id: SQLI-001
+    pattern: "['\"\\s](or|and)\\s+\\d+=\\d+.*"
+    target: ["query_params", "post_body"]
+    action: "block"
+    description: "Detects common SQL Injection patterns (e.g., ' OR 1=1--)"
+
+  - id: XSS-001
+    pattern: "<script.*?>|javascript:|onload=|onerror=|on\w+=|"><img.*?>"
+    target: ["query_params", "post_body", "headers"]
+    action: "block"
+    description: "Detects common XSS patterns"
+
+  - id: PATH-001
+    pattern: "\.\.\\/|\.\./|etc/passwd|C:\\Windows\\System32"
+    target: ["url", "query_params", "post_body"]
+    action: "block"
+    description: "Detects path traversal attempts"
+
+  - id: CMD-001
+    pattern: "(cmd|bash|sh|powershell|exec|system)\\s+(\\.|\\w+:\\\w+:\\\w+:)"
+    target: ["query_params", "post_body"]
+    action: "block"
+    description: "Detects command injection attempts"
