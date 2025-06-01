@@ -1,8 +1,8 @@
 # MiniWAF - A Simple Web Application Firewall Rule Engine
 
-[![GitHub license](https://img.shields.io/github/license/yourusername/miniwaf)](https://github.com/yourusername/miniwaf)
+[![GitHub license](https://img.shields.io/github/license/pramodhcyb/miniwaf)](https://github.com/pramodhcyb/miniwaf)
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/miniwaf)](https://github.com/yourusername/miniwaf/issues)
+[![GitHub issues](https://img.shields.io/github/issues/pramodhcyb/miniwaf)](https://github.com/pramodhcyb/miniwaf/issues)
 
 MiniWAF is a simplified Web Application Firewall (WAF) implementation that demonstrates core WAF functionality. It acts as a middleware component in a Flask web application, inspecting incoming HTTP requests against predefined security rules and blocking malicious traffic.
 
@@ -20,7 +20,7 @@ MiniWAF is a simplified Web Application Firewall (WAF) implementation that demon
 - 📊 Real-time request monitoring
 - 📚 Detailed documentation
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -54,7 +54,7 @@ python waf.py
 
 The WAF will start on http://localhost:5000
 
-## 🧪 Testing
+##  Testing
 
 You can test the WAF by making requests to different endpoints:
 
@@ -78,7 +78,7 @@ curl "http://localhost:5000/test-xss?data=<script>alert('XSS')</script>"
 curl "http://localhost:5000/../../../../etc/passwd"
 ```
 
-## 📝 Rule Configuration
+##  Rule Configuration
 
 The WAF uses YAML configuration for its rules. You can find the default rules in `rules.yaml`. Each rule contains:
 
@@ -133,7 +133,7 @@ rules:
     description: "Detects PHP command execution attempts"
 ```
 
-## 🚦 Security Considerations
+##  Security Considerations
 
 This is a simplified implementation for educational purposes. In a production environment:
 - Use HTTPS for secure communication
@@ -182,12 +182,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Thanks to the Flask community for their excellent web framework
 - Special thanks to contributors who have helped improve this project
 
-## 📞 Support
-
-For support, please:
-- Open an issue in the GitHub repository
-- Check the documentation first
-- Provide detailed information about your problem
 
 ## 🔍 Project Status
 
