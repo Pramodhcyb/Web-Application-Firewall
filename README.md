@@ -32,7 +32,7 @@ MiniWAF is a simplified Web Application Firewall (WAF) implementation that demon
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/miniwaf.git
+git clone https://github.com/Pramodhcyb/Web-Application-Firewall
 cd miniwaf
 ```
 
